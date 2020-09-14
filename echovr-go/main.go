@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -9,7 +10,7 @@ import (
 	"time"
 )
 
-func getFrame(address string) (response string, err error) {
+func getFrame(address string) (response map[string]interface{}, err error) {
 	url := fmt.Sprintf("http://%s:6721/session", address)
 	log.Println(url)
 
@@ -21,7 +22,13 @@ func getFrame(address string) (response string, err error) {
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
-	response = string(body)
+
+	response = make(map[string]interface{})
+	err = json.Unmarshal(body, &response)
+	if err != nil {
+		log.Printf("Response could not be decoded as JSON:\n%v", err)
+		return
+	}
 
 	return
 }
@@ -38,6 +45,6 @@ func main() {
 			continue
 		}
 
-		log.Printf("%s", response)
+		log.Printf("%v", response)
 	}
 }
