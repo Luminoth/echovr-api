@@ -2,6 +2,10 @@
 
 # Usage
 
+## Python
+
+* python echovr_starter.py
+
 ## Go
 
 * go build
