@@ -26,7 +26,7 @@ async function main() {
   while (true) {
     const response = await getFrame(address);
     if (!response) {
-      console.log("Could not access API, trying again in 3 seconds");
+      console.log('Could not access API, trying again in 3 seconds');
       await new Promise(res => setTimeout(res, 3000));
       continue;
     }
