@@ -1,7 +1,9 @@
 echovr-go/echovr-go
 
 echovr-rs/target
-echovr-rs/Cargo.lock
 
 echovr-cs/bin
 echovr-cs/obj
+
+echovr-ts/node_modules
+echovr-ts/dist
