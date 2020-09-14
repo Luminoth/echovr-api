@@ -1,0 +1,17 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "downlevelIteration": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "esnext",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "strict": true,
+        "lib": [
+            "es2018"
+        ]
+    }
+}

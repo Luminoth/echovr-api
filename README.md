@@ -21,3 +21,8 @@
 * dotnet restore
 * dotnet build
 * dotnet run [-- {address}]
+
+## Typescript
+
+* npm install
+* npm start
