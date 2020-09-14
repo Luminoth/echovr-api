@@ -2,3 +2,6 @@ echovr-go/echovr-go
 
 echovr-rs/target
 echovr-rs/Cargo.lock
+
+echovr-cs/bin
+echovr-cs/obj

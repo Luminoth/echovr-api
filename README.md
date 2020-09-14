@@ -15,3 +15,9 @@
 
 * cargo build
 * cargo run [-- --address {address}]
+
+## C#
+
+* dotnet restore
+* dotnet build
+* dotnet run [-- {address}]
