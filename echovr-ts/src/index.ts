@@ -12,7 +12,7 @@ async function getFrame(address: string) {
     return undefined;
   }
 
-  return resp ? resp.data : undefined;
+  return resp?.data;
 }
 
 async function main() {
